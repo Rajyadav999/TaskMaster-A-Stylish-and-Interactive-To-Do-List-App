@@ -1,0 +1,141 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(135deg,#153677,#4e085f);
+}
+h1{
+    text-align: center;
+    color: #FFD700;
+    margin-top: 3vh;
+}
+.container{
+ display:flex;
+}
+.intro{
+    width: 50vw;
+    height: 50vh;
+    color: #D3D3D3;
+    font-size: x-large;
+    line-height: 1.5;
+    margin-left: 2vw;
+}
+
+.todo-app{
+    width:100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 60px auto 20px;
+    padding: 40px 30px 70px ;
+    border-radius: 10px;
+}
+img{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+}
+.row{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius:20%; 
+    border-radius: 50px;
+}
+#log{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    /* justify-content: center; */
+}
+#input-box{
+  
+    background: transparent;
+    padding: 2vh;
+    margin-left: 2vw;
+    border: none;
+    outline: none;
+    font-size: larger;
+    /* text-align: center; */
+}
+button{
+   background-color:rgb(255, 166, 0);
+   font-size: large;
+   border: none;
+   width:8rem;
+   height:3rem;
+   border-radius: 50px;
+}
+/* cross css */
+ #task li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(oval.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%; /* Center vertically */
+    left: 5px;
+    transform: translateY(-50%); /* Shift up half of its height */
+ }
+ 
+
+#task li {
+    list-style-type: none;
+    margin-top: 1.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    padding-left: 3.5vw;
+    border-radius: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+#task li.checked::before{
+    background-image: url(check.png);
+}
+ 
+ li.checked{
+    text-decoration: line-through;
+    color: darkgrey;
+}
+
+#task li span {
+    background-color: #8ffc7a;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem bolder;
+    line-height: 1rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    flex-shrink: 0; /* Prevents the cross from shrinking */
+    text-decoration: none;
+}
+#task li span:hover{
+    background-color:red;
+}
+#task li::marker {
+    content: none; /* Remove default bullet */
+}
+
+#task li div {
+    flex-grow: 1;
+    word-break: break-word;
+}
+#task{
+    font-size: x-large;
+    
+}
